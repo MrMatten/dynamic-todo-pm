@@ -1,0 +1,83 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  color: white;
+}
+
+.input-container {
+  position: relative;
+  width: 320px;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+.input-container::after {
+  content: '✎';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+input:focus + ::after {
+  color: #4A90E2;
+}
+
+.event-box {
+  box-sizing: border-box;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-title {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.event-detail {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.event-detail span {
+  font-weight: 600;
+  color: #444;
+}
+
+.blur-text {
+  color: #888;
+  background: rgba(200, 200, 200, 0.3);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
